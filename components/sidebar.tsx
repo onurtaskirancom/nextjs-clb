@@ -19,12 +19,12 @@ const socialLinks = [
 
 const sidebar = () => {
   return (
-    <div className="max-w-md float-left block ml-16 px-5 ">
+    <div className="max-w-md float-left block ml-16 px-5  max-md:ml-0 max-md:px-0 ">
       <h2
         className="text-center font-medium text-xl md:text-2xl mb-2 text-center overflow-hidden before:h-[1px] after:h-[1px] after:bg-tahiti-title 
            after:inline-block after:relative after:align-middle after:w-2/5 
            before:bg-tahiti-title before:inline-block before:relative before:align-middle 
-           before:w-2/5 before:right-2 after:left-2 text-xl p-4 ">
+           before:w-2/5 before:right-2 after:left-2 text-xl p-4 max-sm:p-1 ">
         About
       </h2>
       <div className="mb-9">

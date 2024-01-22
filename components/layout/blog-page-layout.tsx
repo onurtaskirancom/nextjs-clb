@@ -1,7 +1,6 @@
 import { cn } from "@/lib/utils";
 import Sidebar from "@/components/sidebar";
 import ScrollButton from "@/components/scroll-button";
-import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 const BlogPageLayout = ({
   children,
@@ -19,7 +18,6 @@ const BlogPageLayout = ({
   return (
     <Element className={className}>
       {/* <h2 className="text-xl lg:text-2xl font-bold mb-8 lg:mb-12">{title}</h2> */}
-      <GoogleAnalytics GA_MEASUREMENT_ID="G-TNMWFBYJN0" />
       <div
         className={cn(
           "grid gap-8 md:grid-cols-1 lg:grid-cols-2 lg:gap-y-12 max-w-4xl float-left  ",

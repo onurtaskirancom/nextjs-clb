@@ -6,6 +6,8 @@ import { cn } from "@/lib/utils";
 import "@/styles/global.css";
 import { Metadata } from "next";
 import Sidebar from "@/components/sidebar";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
+
 
 export const metadata: Metadata = {
   title: {
@@ -56,6 +58,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <GoogleAnalytics GA_MEASUREMENT_ID="G-TNMWFBYJN0" />
       <body
         className={cn(
           fontSans.variable,

@@ -75,11 +75,13 @@
     @apply p-0;
   }
 
-  pre > code:not([data-language]) {
+  /* pre > code:not([data-language]) {
     @apply pl-4;
-  }
+  } */
 
-  pre > code {
+  
+
+  /* pre > code {
     @apply grid overflow-x-auto py-4 bg-[--color-pre-code-bg];
     @apply border border-[--color-pre-code-borders] rounded-inherit;
 
@@ -91,7 +93,7 @@
       @apply border-l-[--color-pre-code-line-highlight-border];
       @apply bg-[--color-pre-code-line-highlight];
     }
-  }
+  } */
 
   pre > code[data-line-numbers] {
     --_counter-width: 1ch;

@@ -66,12 +66,13 @@
 
 // export default ThemeToggle;
 
-
-
 "use client";
 
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
+import * as Prism from "prismjs";
+
+// import "prismjs/themes/prism-okaidia.css"
 
 const ThemeToggle = () => {
   const [mounted, setMounted] = useState(false);
@@ -79,6 +80,10 @@ const ThemeToggle = () => {
 
   // When mounted on client, now we can show the UI
   useEffect(() => setMounted(true), []);
+
+  useEffect(() => {
+    Prism.highlightAll();
+  });
 
   if (!mounted) {
     return null;
@@ -112,4 +117,3 @@ const ThemeToggle = () => {
 };
 
 export default ThemeToggle;
-

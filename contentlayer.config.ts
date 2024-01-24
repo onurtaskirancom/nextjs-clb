@@ -24,13 +24,13 @@ export default makeSource({
           },
         },
       ],
-      [
-        rehypePrettyCode,
-        {
-          theme: { dark: "github-dark-dimmed", light: "github-light" },
-          keepBackground: false,
-        },
-      ],
+      // [
+      //   rehypePrettyCode,
+      //   {
+      //     theme: { dark: "github-dark-dimmed", light: "github-light" },
+      //     keepBackground: false,
+      //   },
+      // ],
     ],
   },
 });

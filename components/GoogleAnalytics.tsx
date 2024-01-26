@@ -1,15 +1,11 @@
 "use client";
+
+import Script from "next/script";
 import { usePathname, useSearchParams } from "next/navigation";
 import { useEffect } from "react";
 import { pageview } from "@/lib/gtagHelper";
 
-import Script from "next/script";
-
-export default function GoogleAnalytics({
-  GA_MEASUREMENT_ID,
-}: {
-  GA_MEASUREMENT_ID: string;
-}) {
+export default function GoogleAnalytics({GA_MEASUREMENT_ID}: {GA_MEASUREMENT_ID: string;}) {
     const pathname = usePathname();
     const searchParams = useSearchParams();
 
@@ -18,6 +14,7 @@ export default function GoogleAnalytics({
 
       pageview(GA_MEASUREMENT_ID, url);
     }, [pathname, searchParams, GA_MEASUREMENT_ID]);
+    
   return (
     <>
       <Script
@@ -33,8 +30,14 @@ export default function GoogleAnalytics({
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
 
-                 gtag('config', 'G-TNMWFBYJN0');
-          `,
+                gtag('consent', 'default', {
+                    'analytics_storage': 'denied'
+                });
+                
+                gtag('config', '${GA_MEASUREMENT_ID}', {
+                    page_path: window.location.pathname,
+                });
+                `,
         }}
       />
     </>

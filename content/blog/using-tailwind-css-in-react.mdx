@@ -1,0 +1,190 @@
+---
+title: Using Tailwind CSS in React
+description: Tailwind reduces the need to write custom CSS and increases the customizability of the project. With benefits like responsive design, dynamic and reusable classes,
+date: "2024-02-07T23:45:00"
+tags:
+  - Css
+  - React
+  - Web Programming
+  - Software
+image: "https://res.cloudinary.com/djfqidbj1/image/upload/v1707341455/uf4ubyrz3rbguvpnf01a.jpg"
+---
+
+<img
+  className="w-full rounded-xl"
+  src="https://res.cloudinary.com/djfqidbj1/image/upload/v1707341455/uf4ubyrz3rbguvpnf01a.jpg"
+  alt="onurtaskiran"
+/>
+
+Tailwind reduces the need to write custom CSS and increases the customizability of the project. With benefits like responsive design, dynamic and reusable classes, consistency, and broad community support, Tailwind is a popular choice in modern web development. Tailwind reduces the file size of the project and improves performance by removing unused style rules and generating only the styles that are needed. It allows developers to quickly adapt to the project. Tailwind offers comprehensive documentation and a large community. Users can quickly solve their problems and access information. You can always visit the docs and search for the feature in question.
+
+Let's examine how we install and use Tailwind CSS in our React project.
+
+I'm creating our React project.
+
+```javascript
+npx create-react-app my-project
+cd my-project
+```
+
+First of all, we need to add Tailwind to your project. You can install Tailwind with a command like this:
+
+```javascript
+npm install -D tailwindcss
+```
+
+Configuration:
+Before using Tailwind, we create a configuration file. We can create a file called tailwind.config.js in the root directory of your project and make your customizations there.
+
+Run this command to create the tailwind.config.js file:
+
+```javascript
+npx tailwindcss init
+```
+
+An example tailwind.config.js file:
+
+```javascript
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
+```
+
+Creating CSS:
+After adding Tailwind to your project, create a CSS file and add the Tailwind classes to it. You can create a sample file like this (for example, index.css):
+
+```javascript
+/* index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* You can add custom styles here as needed */
+```
+
+Usage in HTML:
+You can apply styling by adding Tailwind classes to elements. For example:
+
+```javascript
+function App() {
+  return (
+    <div className="container mx-auto mt-8 p-4">
+      <div className="max-w-md mx-auto bg-stone-700 rounded-md overflow-hidden shadow-md">
+        <img
+          className="w-full h-48 object-cover"
+          src="https://source.unsplash.com/800x600/?cat"
+          alt="Kedi Resmi"
+        />
+        <div className="p-4">
+          <h1 className="text-2xl font-bold mb-2 text-gray-50">Cute cat </h1>
+          <p className="text-slate-300">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam
+            velit, vulputate eu pharetra nec, mattis ac neque.
+          </p>
+          <div className="mt-4">
+            <span className="text-sm text-gray-400">
+              Category:
+              <a href="#" className="text-amber-300">
+                Animals
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default App;
+```
+
+<img
+  className="w-8/12 "
+  src="https://res.cloudinary.com/djfqidbj1/image/upload/v1707339526/nfp3pz0ilrlqpafev6ba.jpg"
+  alt="onurtaskiran"
+/>
+
+In this example, there is a picture card and a grid structure on the page.
+
+container mx-auto mt-8 p-4: These classes centralize the content container, leave a space at the top, and add internal space around the content.
+
+max-w-md mx-auto bg-stone-700 rounded-md overflow-hidden shadow-md: These classes set maximum width (md: medium), center content, set background color to stone-700, round corners, hide overflow and add a shadow.
+
+w-full h-48 object-cover: These classes stretch the image width (w-full), set its height (h-48), and the object-cover class ensures the image covers the container while maintaining its aspect ratio.
+
+text-2xl font-bold mb-2 text-gray-50: These classes style the title; they set the text size (text-2xl), choose a bold font (font-bold), add bottom margin (mb-2), and set the text color (text-gray-50).
+
+text-slate-300: This class sets the text color.
+
+mt-4: This class adds top margin (mt-4).
+
+text-sm text-gray-400: These classes set a small text size (text-sm) and define the text color (text-gray-400).
+
+text-amber-300: This class sets the text color (text-amber-300).
+
+By following these simple steps, you can quickly apply styles to your project using Tailwind CSS. It's also beneficial to explore Tailwind CSS's comprehensive documentation: Tailwind CSS Documentation.
+
+Custom Css
+
+Let's see how we can create our own custom class. so we can avoid some repetitions.
+
+```javascript
+max-w-md mx-auto bg-stone-700
+```
+
+I use these two classes to center the elements, and with the other we give color. I basically align them the same way. I want to do the same for future episodes.
+
+```javascript
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .align-item {
+    @apply max-w-md mx-auto bg-stone-700;
+  }
+}
+```
+
+and we add it to our class.
+
+```javascript
+<div class="align-item rounded-md overflow-hidden shadow-md">
+```
+
+So our first code will be as follows.
+
+```javascript
+     <div className="container mx-auto mt-8 p-4">
+      <div className="align-item rounded-md overflow-hidden shadow-md">
+        <img
+          className="w-full h-48 object-cover"
+          src="https://source.unsplash.com/800x600/?cat"
+          alt="Kedi Resmi"
+        />
+        <div className="p-4">
+          <h1 className="text-2xl font-bold mb-2 text-gray-50">Cute cat </h1>
+          <p className="text-slate-300">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam
+            velit, vulputate eu pharetra nec, mattis ac neque.
+          </p>
+          <div className="mt-4">
+            <span className="text-sm text-gray-400">
+              Category:
+              <a href="#" className="text-amber-300">
+                Animals
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+```
+And as a result, our code will perform the same operation.
+
+Happy coding.

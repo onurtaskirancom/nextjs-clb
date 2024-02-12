@@ -59,10 +59,6 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <GoogleAnalytics GA_MEASUREMENT_ID="G-TNMWFBYJN0" />
-      <meta
-        name="google-site-verification"
-        content="BsckUQMGWe2FUU4kdhYMB1LbWYvwSSARc7fFDRkic6s"
-      />
       <body
         className={cn(
           fontSans.variable,

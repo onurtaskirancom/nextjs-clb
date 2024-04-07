@@ -24,7 +24,7 @@ const tailwindConfig = {
           dark: "#96d0ff",
           heed: "#a9b9ca",
           bio: "#a9b9ca",
-          title: "#82aaff",
+          title: "#849fd9",
           name: "#96d0ff",
           menu: "#ce78b0",
           footer: "#ce78b0",

@@ -13,7 +13,7 @@ const socialLinks = [
   { icon: FaGithub, href: config.socials.github, title: "Github" },
   { icon: CiLinkedin, href: config.socials.linkedin, title: "LinkedIn" },
   { icon: FaXTwitter, href: config.socials.twitter, title: "Twitter" },
-  { icon: FaInstagram, href: config.socials.instagram, title: "Telegram" },
+  // { icon: FaInstagram, href: config.socials.instagram, title: "Telegram" },
   { icon: CiMail, href: `mailto:${config.socials.email}`, title: "Email" },
 ];
 

@@ -1,6 +1,6 @@
 ---
 title: Sending Email To Gmail SMTP Code with ASP.NET Core MVC
-description: We use the email sending process frequently in any web application. Sending mail with ASP.NET Core MVC is really simple. 
+description: We use the email sending process frequently in any web application. Sending mail with ASP.NET Core MVC is really simple.
 date: "2022-08-11T04:45:00"
 image: "https://res.cloudinary.com/djfqidbj1/image/upload/v1671155128/ydl8w4zphcwtd3uz05ef.jpg"
 tags:
@@ -9,7 +9,11 @@ tags:
   - Web Programming
 ---
 
-<img className="w-full rounded-xl" src="https://res.cloudinary.com/djfqidbj1/image/upload/v1671155128/ydl8w4zphcwtd3uz05ef.jpg" alt="onurtaskiran" />
+<img
+  className="w-full rounded-xl"
+  src="https://res.cloudinary.com/djfqidbj1/image/upload/v1671155128/ydl8w4zphcwtd3uz05ef.jpg"
+  alt="onurtaskiran"
+/>
 
 We use the email sending process frequently in any web application. Sending mail with ASP.NET Core MVC is really simple. What we need to do is add class to Models folder and add controller to our controllers folder. After writing a few code, our process will be finished.
 
@@ -27,6 +31,7 @@ namespace onurtaskiran.Models
     }
 }
 ```
+
 we use the "System.Net.Mail" namespace. Yes don't forget to add it.
 
 ```javascript
@@ -77,8 +82,8 @@ Include the HTML page in our project and edit it as in the code
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
-}		
-		
+}
+
 <h4>Email</h4>
 <hr />
 <div class="row">

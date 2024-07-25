@@ -1,19 +1,18 @@
-import Link from "@/components/link"
+import Link from "@/components/link";
 import Tag from "@/components/tag";
 import PostTag from "../../../components/post-tag";
 import { cn, formatDate, isArrayNotEmpty, slugify } from "@/lib/utils";
 import Image from "@/components/image";
 import { MdDateRange } from "react-icons/md";
 
-
 // import { slug } from "github-slugger";
- import tagData from "app/tag-data.json";
+import tagData from "app/tag-data.json";
 // import { genPageMetadata } from "app/seo";
 
-export const metadata = ({
+export const metadata = {
   title: "Tags",
   description: "Things I blog about",
-});
+};
 
 export default async function Page() {
   const tagCounts = tagData as Record<string, number>;

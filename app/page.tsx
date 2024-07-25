@@ -11,8 +11,6 @@
 
 // export default Page;
 
-
-
 import BlogPageLayout from "@/components/layout/blog-page-layout";
 import PostPaginator from "@/components/post-paginator";
 import config from "@/lib/siteConfig";
@@ -42,7 +40,6 @@ const Page = ({ params }: { params: { count?: string[] } }) => {
 };
 
 export default Page;
-
 
 // import BlogCard from "@/components/blog-card";
 // import BlogPageLayout from "@/components/layout/blog-page-layout";

@@ -34,7 +34,3 @@ const BlogPageLayout = ({
 };
 
 export default BlogPageLayout;
-
-
-
-

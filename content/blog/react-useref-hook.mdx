@@ -9,7 +9,11 @@ tags:
   - Web Programming
 ---
 
-<img className="w-full rounded-xl" src="https://res.cloudinary.com/djfqidbj1/image/upload/v1691446553/gxkx5odz1ftkakonxqpp.jpg" alt="onurtaskiran" />
+<img
+  className="w-full rounded-xl"
+  src="https://res.cloudinary.com/djfqidbj1/image/upload/v1691446553/gxkx5odz1ftkakonxqpp.jpg"
+  alt="onurtaskiran"
+/>
 
 Usually used to directly access a DOM element. We can make changes like we do in Valillajs. We can also be used to store a mutable value that does not cause rework when Updated. that is, changes made to the current value of UseRef will not re-render.
 
@@ -18,19 +22,21 @@ UseState triggers the component to be rendered again, but UseRef does not trigge
 We include it on our page as a priority.
 
 ```javascript
-import React, { useRef } from 'react';
+import React, { useRef } from "react";
 ```
+
 We declare a ref object whose initial value is null.
 
 ```javascript
 const inputRef = useRef(null);
 ```
+
 Example:
 
 When we click the button, our function will run and the focus function of the element we assigned to the inputRef will be called.
 
 ```javascript
-import { useRef } from 'react';
+import { useRef } from "react";
 
 const UseRefBasics = () => {
   const inputRef = useRef(null);
@@ -48,6 +54,7 @@ const UseRefBasics = () => {
 };
 export default UseRefBasics;
 ```
+
 This way we use it to access the elements in the Dom.
 
 Initial Render
@@ -55,27 +62,24 @@ Initial Render
 Again, this is probably not something you'll use in every project, but it's essentially a nifty solution here where you can avoid running some functions after the initial render.
 
 ```javascript
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from "react";
 
 const UseRefBasics = () => {
   const [value, setValue] = useState(0);
   const renders = useRef(false);
 
-  useEffect(()=>{
-        if (!renders.current) {
-          renders.current = true;
-          return;
-        }
-         console.log('re-render');
-  },[value])
-
+  useEffect(() => {
+    if (!renders.current) {
+      renders.current = true;
+      return;
+    }
+    console.log("re-render");
+  }, [value]);
 
   return (
     <div>
       <h1>value : {value}</h1>
-      <button onClick={() => setValue(value + 1)}>
-        increase
-      </button>
+      <button onClick={() => setValue(value + 1)}>increase</button>
     </div>
   );
 };

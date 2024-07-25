@@ -8,7 +8,12 @@ tags:
   - Software
   - Php
 ---
-<img className="w-full rounded-xl" src="https://res.cloudinary.com/djfqidbj1/image/upload/v1671155330/tfsjfticcp6goxt6cokv.jpg" alt="onurtaskiran" />
+
+<img
+  className="w-full rounded-xl"
+  src="https://res.cloudinary.com/djfqidbj1/image/upload/v1671155330/tfsjfticcp6goxt6cokv.jpg"
+  alt="onurtaskiran"
+/>
 
 With captcha, we check whether the data is entered by users, and we prevent many attacks such as XSS attack or SQL injection. Captcha making with Symfony is simple, also very paritic and safe to use I'll explain step by step how it's done. The number encrypted with md5 will be 32 characters long. We will take 6 characters.
 
@@ -26,28 +31,35 @@ Picture dimensions are determined
 
 ```javascript
 $width = 75;
-$height= 25;
+$height = 25;
 ```
+
 The picture that we will work on is being created.
+
 ```javascript
 $image = ImageCreate($en, $boy);
 ```
+
 We create White, Black and Red colors. Numbers refer to colors.
+
 ```javascript
 $white = ImageColorAllocate($image, 255, 255, 255);
 $black = ImageColorAllocate($image, 0, 0, 0);
 $red = ImageColorAllocate($image, 242, 0, 0);
 ```
+
 Here we make the background white
 
 ```javascript
 ImageFill($image, 0, 0, $white);
 ```
+
 We write the generated verification code on the picture.
 
 ```javascript
 ImageString($image, 6, 9, 5, $session->get('captcha'), $black);
 ```
+
 We complicate the image with lines to blend the landscape a little. If you wish, you can remove the lines by removing the imageline() lines.
 
 ```javascript
@@ -56,6 +68,7 @@ imageline($image, 0, 25, $height, 0, $red);
 imageline($image, $width, $height, 40, 0, $red);
 imageline($image, 0, 23, $width, 23, $red);
 ```
+
 We send the type of our file to the browser.
 
 ```javascript
@@ -67,15 +80,17 @@ We print our picture in Jpg format.
 ```javascript
 ImageJpeg($image);
 ```
+
 We are deleting it because we will use it only once.
 
 ```javascript
 ImageDestroy($image);
 exit();
 ```
+
 That is all. Below are all the codes. Happy codings...
 
-```javascript
+````javascript
  public function captchaAction( )
     {
         $em       = $this->getDoctrine()->getEntityManager();
@@ -115,3 +130,4 @@ That is all. Below are all the codes. Happy codings...
     }
     ```
 Good bye...
+````

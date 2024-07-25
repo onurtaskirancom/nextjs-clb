@@ -8,18 +8,29 @@ tags:
   - C#
   - Software
 ---
-<img className="w-full rounded-xl" src="https://res.cloudinary.com/djfqidbj1/image/upload/v1671154306/ycftzm6obd0hnagtoies.jpg" alt="onurtaskiran" />
+
+<img
+  className="w-full rounded-xl"
+  src="https://res.cloudinary.com/djfqidbj1/image/upload/v1671154306/ycftzm6obd0hnagtoies.jpg"
+  alt="onurtaskiran"
+/>
 
 Entity Framework is an object-relational mapper (O/RM) that enables .NET developers to work with a database using .NET objects. It eliminates the need for most of the data-access code that developers usually need to write.” Entity Framework is an open-source ORM framework for .NET applications supported by Microsoft. Architects and developers of data-oriented applications have typically struggled with the need to achieve two very different objectives.
 
 Create one Window form application
 
 Create the form as below.
-<img className="w-4/5" src="https://res.cloudinary.com/djfqidbj1/image/upload/v1704618399/qdvsrtpqgpffzlwtu08i.jpg" alt="onurtaskiran" />
+
+<img
+  className="w-4/5"
+  src="https://res.cloudinary.com/djfqidbj1/image/upload/v1704618399/qdvsrtpqgpffzlwtu08i.jpg"
+  alt="onurtaskiran"
+/>
 
 Let's create our product object
 
 Product.cs
+
 ```javascript
 namespace EntityFrameworkExample
 {
@@ -32,8 +43,14 @@ namespace EntityFrameworkExample
     }
 }
 ```
+
 Now, in this step, we will install entity framework. So, go to nuget package manager and then install theentity framework as you do see below in the screenshot.
-<img className="w-4/5" src="https://res.cloudinary.com/djfqidbj1/image/upload/v1704618400/zyqppasaoww0ynyy96ww.jpg" alt="onurtaskiran" />
+
+<img
+  className="w-4/5"
+  src="https://res.cloudinary.com/djfqidbj1/image/upload/v1704618400/zyqppasaoww0ynyy96ww.jpg"
+  alt="onurtaskiran"
+/>
 
 Create the CompanyContext class as follows
 
@@ -50,7 +67,9 @@ namespace EntityFrameworkExample
     }
 }
 ```
+
 Form1.cs
+
 ```javascript
 using System;
 using System.Windows.Forms;
@@ -112,7 +131,7 @@ namespace EntityFrameworkExample
             MessageBox.Show("Updated");
         }
 
-       
+
 
 
         private void btnAdd_Click_1(object sender, EventArgs e)
@@ -149,11 +168,13 @@ namespace EntityFrameworkExample
             tbxStockAmountUpdate.Text = dgwProducts.CurrentRow.Cells[3].Value.ToString();
         }
 
- 
+
     }
 }
 ```
+
 ProductCon.cs
+
 ```javascript
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -211,9 +232,11 @@ namespace EntityFrameworkExample
         }
     }
 }
- 
+
 ```
+
 App.config
+
 ```javascript
 <?xml version="1.0" encoding="utf-8"?>
 <configuration>

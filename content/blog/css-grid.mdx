@@ -1,6 +1,6 @@
 ---
 title: CSS Grid
-description: We can create a website template very easily with Grid. We can design the whole website with basic css methods such as float, display position or flexbox, but the Grid system is much easier. 
+description: We can create a website template very easily with Grid. We can design the whole website with basic css methods such as float, display position or flexbox, but the Grid system is much easier.
 date: "2023-01-02T01:19:20"
 image: "https://res.cloudinary.com/djfqidbj1/image/upload/v1672642092/p9nauxcq9z2a5qd8nfdp.jpg"
 tags:
@@ -9,7 +9,11 @@ tags:
   - Css
 ---
 
-<img className="w-full rounded-xl" src="https://res.cloudinary.com/djfqidbj1/image/upload/v1672642092/p9nauxcq9z2a5qd8nfdp.jpg" alt="onurtaskiran" />
+<img
+  className="w-full rounded-xl"
+  src="https://res.cloudinary.com/djfqidbj1/image/upload/v1672642092/p9nauxcq9z2a5qd8nfdp.jpg"
+  alt="onurtaskiran"
+/>
 
 We can create a website template very easily with Grid. We can design the whole website with basic css methods such as float, display position or flexbox, but the Grid system is much easier. And it makes our job a lot easier. While Flexbox can do our one-dimensional coding, in the grid model, we can code in both dimensions. We usually use columns and rows when creating the grid structure. We do not have to use the css grid in all of our designs. For example we can make menus with flexbox. So we can make the general design of our page with css grid.
 
@@ -37,7 +41,7 @@ First of all, display: grid; we run the system. In other words, we give our item
             margin: 10px;
             font-size: 25px;
             background-color: rgb(195, 196, 197);
-            color:dodgerblue;   
+            color:dodgerblue;
         }
     </style>
 </head>
@@ -56,8 +60,13 @@ First of all, display: grid; we run the system. In other words, we give our item
 </body>
 </html>
 ```
+
 output:
-<img className="w-full" src="https://res.cloudinary.com/djfqidbj1/image/upload/v1672609349/fyemyiwfa83pdtvpck8c.jpg" />
+
+<img
+  className="w-full"
+  src="https://res.cloudinary.com/djfqidbj1/image/upload/v1672609349/fyemyiwfa83pdtvpck8c.jpg"
+/>
 We add our grid-template-columns code and divide it into 3 columns
 
 ```javascript
@@ -67,9 +76,14 @@ We add our grid-template-columns code and divide it into 3 columns
             padding: 25px;
             background-color: rgb(216, 0, 126);
   }
-  ```
+```
+
 output:
-<img className="w-full" src="https://res.cloudinary.com/djfqidbj1/image/upload/v1672609349/x5veaqfkrf6fmpna1zt1.jpg" />
+
+<img
+  className="w-full"
+  src="https://res.cloudinary.com/djfqidbj1/image/upload/v1672609349/x5veaqfkrf6fmpna1zt1.jpg"
+/>
 we set the height of our rows.
 
 ```javascript
@@ -81,8 +95,13 @@ we set the height of our rows.
             background-color: rgb(216, 0, 126);
         }
 ```
+
 output:
-<img className="w-full" src="https://res.cloudinary.com/djfqidbj1/image/upload/v1672609349/fhxopnjv0tpradqwfgvq.jpg" />
+
+<img
+  className="w-full"
+  src="https://res.cloudinary.com/djfqidbj1/image/upload/v1672609349/fhxopnjv0tpradqwfgvq.jpg"
+/>
 when we delete margin information from our items
 
 ```javascript
@@ -90,11 +109,16 @@ when we delete margin information from our items
             padding: 15px;
             font-size: 25px;
             background-color: rgb(195, 196, 197);
-            color:dodgerblue;   
+            color:dodgerblue;
         }
 ```
+
 output:
-<img className="w-full" src="https://res.cloudinary.com/djfqidbj1/image/upload/v1672609349/simyx7qclbmkn523g0qb.jpg" />
+
+<img
+  className="w-full"
+  src="https://res.cloudinary.com/djfqidbj1/image/upload/v1672609349/simyx7qclbmkn523g0qb.jpg"
+/>
 
 We have a gap property. The grid-gap property defines the size of the gap between the rows and columns in a grid layout.
 
@@ -108,8 +132,13 @@ We have a gap property. The grid-gap property defines the size of the gap betwee
             background-color: rgb(216, 0, 126);
         }
 ```
+
 output:
-<img className="w-full" src="https://res.cloudinary.com/djfqidbj1/image/upload/v1672609349/hz1iilotyoy2ushp1qsa.jpg" />
+
+<img
+  className="w-full"
+  src="https://res.cloudinary.com/djfqidbj1/image/upload/v1672609349/hz1iilotyoy2ushp1qsa.jpg"
+/>
 
 when the same value repeats, we use the repeat function. 3 values ​​and each will be 150px
 
@@ -125,8 +154,13 @@ when the same value repeats, we use the repeat function. 3 values ​​and each
             background-color: rgb(216, 0, 126);
         }
 ```
+
 output
-<img className="w-full" src="https://res.cloudinary.com/djfqidbj1/image/upload/v1672609349/jjvyf2vcdobwed8yk1rf.jpg" />
+
+<img
+  className="w-full"
+  src="https://res.cloudinary.com/djfqidbj1/image/upload/v1672609349/jjvyf2vcdobwed8yk1rf.jpg"
+/>
 
 Responsive design is not supported because we give pixel values. so we can use the concept of fraction.
 
@@ -140,8 +174,13 @@ Responsive design is not supported because we give pixel values. so we can use t
             background-color: rgb(216, 0, 126);
         }
 ```
+
 output:
-<img className="w-6/12" src="https://res.cloudinary.com/djfqidbj1/image/upload/v1672609349/y3zdtuxeqqqx9kkbdkt6.jpg" />
+
+<img
+  className="w-6/12"
+  src="https://res.cloudinary.com/djfqidbj1/image/upload/v1672609349/y3zdtuxeqqqx9kkbdkt6.jpg"
+/>
 
 When we build a website, we start with such an interface.
 
@@ -179,10 +218,15 @@ When we build a website, we start with such an interface.
   </body>
 </html>
 ```
+
 This is our general outline.
 
 output:
-<img className="w-full" src="https://res.cloudinary.com/djfqidbj1/image/upload/v1672609349/yl5tly1saoktiepibgks.jpg" />
+
+<img
+  className="w-full"
+  src="https://res.cloudinary.com/djfqidbj1/image/upload/v1672609349/yl5tly1saoktiepibgks.jpg"
+/>
 
 Now we can easily design using the grid system.
 
@@ -242,8 +286,13 @@ Now we can easily design using the grid system.
   </body>
 </html>
 ```
+
 output:
-<img className="w-full" src="https://res.cloudinary.com/djfqidbj1/image/upload/v1672609349/y4h1dsuj4obnvsrbekrf.jpg" />
+
+<img
+  className="w-full"
+  src="https://res.cloudinary.com/djfqidbj1/image/upload/v1672609349/y4h1dsuj4obnvsrbekrf.jpg"
+/>
 
 we split our page into 12 columns and the sidebar took up 4 worth of space and the content took up 8 worth of space. Just like we did in Botsrap.
 
@@ -262,7 +311,7 @@ Of course, we can also do it this way.
         grid-column: 1 / -1;
       }
 ```
-	  
+
 Our output will still be the same.
 
 Bye bye ✋

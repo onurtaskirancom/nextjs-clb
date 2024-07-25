@@ -9,24 +9,26 @@ tags:
   - Web Programming
 ---
 
-
-<img className="w-full rounded-xl" src="https://res.cloudinary.com/djfqidbj1/image/upload/v1698158104/sxspklnrlq1n6g8dzvfc.jpg" alt="onurtaskiran" />
+<img
+  className="w-full rounded-xl"
+  src="https://res.cloudinary.com/djfqidbj1/image/upload/v1698158104/sxspklnrlq1n6g8dzvfc.jpg"
+  alt="onurtaskiran"
+/>
 
 In React, we may sometimes experience slowdown problems due to unnecessary component renderings. There are many ways to solve these problems in React. We do not use UseCallback very often in our projects, but when we do, our application is much better in terms of performance. useCallback hook is a hook used to optimize performance and memory usage in React applications. useCallback is specifically used to prevent functions from being created repeatedly. This is especially beneficial from a performance perspective because it reduces unnecessary function creations and re-rendering. In useCallback, we enter a dependencies array, just like in useEffect. If the dependencies array we entered changes, then the function is recalculated.
 
 The basic usage of useCallback is as follows:
 
 ```javascript
-const memoizedCallback = useCallback(
-  () => {
-    // Define the function's tasks here
-  },
-  [dependencies]
-);
+const memoizedCallback = useCallback(() => {
+  // Define the function's tasks here
+}, [dependencies]);
 ```
+
 A simple example:
+
 ```javascript
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback } from "react";
 
 const MyComponent = () => {
   const [count, setCount] = useState(0);
@@ -41,10 +43,11 @@ const MyComponent = () => {
       <button onClick={increment}>Increment</button>
     </div>
   );
-}
+};
 
 export default MyComponent;
 ```
+
 In this example, if the component is re-rendered when count changes, the increment function is also recreated. Thanks to useCallback, the increment function is only recreated when count changes, otherwise it is stored in memory.
 
 An advanced example
@@ -52,7 +55,7 @@ An advanced example
 Here's an example using useCallback for the To-Do List app. This example allows you to add new items and delete items to the To-Do List.
 
 ```javascript
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback } from "react";
 
 const TodoItem = ({ id, text, onDelete }) => {
   const handleDelete = useCallback(() => {
@@ -69,7 +72,7 @@ const TodoItem = ({ id, text, onDelete }) => {
 
 const UseCallback = () => {
   const [todos, setTodos] = useState([]);
-  const [newTodo, setNewTodo] = useState('');
+  const [newTodo, setNewTodo] = useState("");
 
   const addTodo = useCallback(() => {
     if (newTodo) {
@@ -77,7 +80,7 @@ const UseCallback = () => {
         ...prevTodos,
         { id: Date.now(), text: newTodo },
       ]);
-      setNewTodo('');
+      setNewTodo("");
     }
   }, [newTodo]);
 

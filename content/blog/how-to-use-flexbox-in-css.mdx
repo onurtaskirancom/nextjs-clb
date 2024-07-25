@@ -8,54 +8,58 @@ tags:
   - Software
   - Css
 ---
-<img className="w-full rounded-xl" src="https://res.cloudinary.com/djfqidbj1/image/upload/v1672452264/o213g9ngvkuuvrbzmrn7.jpg" />
+
+<img
+  className="w-full rounded-xl"
+  src="https://res.cloudinary.com/djfqidbj1/image/upload/v1672452264/o213g9ngvkuuvrbzmrn7.jpg"
+/>
 
 Why is Flexbox used? It allows us to design our website much more easily and effectively. With Flexbox, we can easily spread the width, height and order of the html elements to the field. Flexbox does this automatically for us without any overflow. Also, we can direct our items as we want. We can apply properties such as float, position, that we use in classical css very simply with flexbox. what we need to do is display: flex; write our code
 
 ```javascript
-flex-direction 
+flex - direction;
 ```
 
 We can list the items listed side by side one under the other
 
 ```javascript
-justify-content
+justify - content;
 ```
 
 We can sort our items horizontally. We can give a certain distance between the elements and bring them to the beginning and the end.
 
 ```javascript
-flex-wrap
+flex - wrap;
 ```
 
 when the screen width gets smaller our items go to the bottom
 
 ```javascript
-align-items
+align - items;
 ```
 
 We can align vertically.
 
 ```javascript
-align-content
+align - content;
 ```
 
 we can adjust the distance between each row.
 
 ```javascript
-align-self
+align - self;
 ```
 
 We can move each element individually.
 
 ```javascript
-order
+order;
 ```
 
 we can sort
 
 ```javascript
-flex-grow:0 
+flex-grow:0
 ```
 
 We can adjust how much our items grow when containers grow.
@@ -84,7 +88,7 @@ Let's create the containers and items of our web page.
        background-color: rgb(148, 158, 161);
        border: 1px solid rgb(95, 174, 248);
        padding: 20px;
-       
+
     }
 
     .item {
@@ -108,7 +112,7 @@ Let's create the containers and items of our web page.
     .item3 {
 
     }
-   
+
 
 </style>
 
@@ -117,7 +121,7 @@ Let's create the containers and items of our web page.
         <div class="item item1">item 1</div>
         <div class="item item2">item 2</div>
         <div class="item item3">item 3</div>
-        
+
     </div>
 </body>
 
@@ -125,7 +129,11 @@ Let's create the containers and items of our web page.
 ```
 
 output picture
-<img className="w-full" src="https://res.cloudinary.com/djfqidbj1/image/upload/v1672449113/jlcljcr8f2or11hlbsg2.jpg" />
+
+<img
+  className="w-full"
+  src="https://res.cloudinary.com/djfqidbj1/image/upload/v1672449113/jlcljcr8f2or11hlbsg2.jpg"
+/>
 
 Now let's add display to our code
 
@@ -167,7 +175,7 @@ Now let's add display to our code
     .item3 {
 
     }
-   
+
 
 </style>
 
@@ -176,7 +184,7 @@ Now let's add display to our code
         <div class="item item1">item 1</div>
         <div class="item item2">item 2</div>
         <div class="item item3">item 3</div>
-        
+
     </div>
 </body>
 
@@ -184,7 +192,11 @@ Now let's add display to our code
 ```
 
 output
-<img className="w-full " src="https://res.cloudinary.com/djfqidbj1/image/upload/v1672449113/ejtoanify4jcyzwyyrnr.jpg" />
+
+<img
+  className="w-full "
+  src="https://res.cloudinary.com/djfqidbj1/image/upload/v1672449113/ejtoanify4jcyzwyyrnr.jpg"
+/>
 As you can see, our items came side by side. Now we can move it however we want.
 
 ```javascript
@@ -211,9 +223,15 @@ Now let's add flex-wrap.
        flex-wrap: wrap;
     }
 ```
+
 output
-<img className="w-full " src="https://res.cloudinary.com/djfqidbj1/image/upload/v1672449113/svvvfakt0s4vbhirpa0c.jpg" />
-As you can see, my items went to the bottom. Items that do not fit according to the screen shrinkage will be lowered.
+
+<img
+  className="w-full "
+  src="https://res.cloudinary.com/djfqidbj1/image/upload/v1672449113/svvvfakt0s4vbhirpa0c.jpg"
+/>
+As you can see, my items went to the bottom. Items that do not fit according to the
+screen shrinkage will be lowered.
 
 ```javascript
 .container {
@@ -226,9 +244,15 @@ As you can see, my items went to the bottom. Items that do not fit according to 
        justify-content: center;
     }
 ```
+
 output
-<img className="w-full " src="https://res.cloudinary.com/djfqidbj1/image/upload/v1672449114/f3ajjx1kssuyr0tbqosm.jpg" />
-By adding justify-content we have centered our elements as you can see. When the screen shrinks, the spaces from right to left will be equalized.
+
+<img
+  className="w-full "
+  src="https://res.cloudinary.com/djfqidbj1/image/upload/v1672449114/f3ajjx1kssuyr0tbqosm.jpg"
+/>
+By adding justify-content we have centered our elements as you can see. When the
+screen shrinks, the spaces from right to left will be equalized.
 
 We can add flex-grow command to our items and make various settings.
 
@@ -282,7 +306,7 @@ We can add flex-grow command to our items and make various settings.
     .item5 {
         flex-grow: 0;
     }
-   
+
 
 </style>
 
@@ -293,7 +317,7 @@ We can add flex-grow command to our items and make various settings.
         <div class="item item3">item 3</div>
         <div class="item item4">item 4</div>
         <div class="item item5">item 5</div>
-        
+
     </div>
 </body>
 
@@ -301,7 +325,11 @@ We can add flex-grow command to our items and make various settings.
 ```
 
 output
-<img className="w-full " src="https://res.cloudinary.com/djfqidbj1/image/upload/v1672449114/sceiaoqusdb0elbsmfbb.jpg" />
+
+<img
+  className="w-full "
+  src="https://res.cloudinary.com/djfqidbj1/image/upload/v1672449114/sceiaoqusdb0elbsmfbb.jpg"
+/>
 We can specify the order of our items by giving the order value.
 
 ```javascript
@@ -330,6 +358,7 @@ We can specify the order of our items by giving the order value.
         order: 2;
     }
 ```
+
 I built a simple website using flexbox.
 
 my html codes
@@ -389,7 +418,7 @@ my html codes
 
       </div>
 
-      
+
     </main>
 
     <div class="subscribe">
@@ -404,12 +433,20 @@ my html codes
 ```
 
 output
-<img className="w-full " src="https://res.cloudinary.com/djfqidbj1/image/upload/v1672449114/k8x3r3bytoiqzgym5bo2.jpg" />
-mobile output
-<img className="w-3/12 mx-2" src="https://res.cloudinary.com/djfqidbj1/image/upload/v1672449114/fg0eoic1coihfpnz3pzg.jpg" alt="onurtaskiran" />
 
+<img
+  className="w-full "
+  src="https://res.cloudinary.com/djfqidbj1/image/upload/v1672449114/k8x3r3bytoiqzgym5bo2.jpg"
+/>
+mobile output
+<img
+  className="w-3/12 mx-2"
+  src="https://res.cloudinary.com/djfqidbj1/image/upload/v1672449114/fg0eoic1coihfpnz3pzg.jpg"
+  alt="onurtaskiran"
+/>
 
 my css codes
+
 ```javascript
 *{
     font-family: 'arial', arial, helvetica;
@@ -450,7 +487,7 @@ a{
 .menu ul{
     list-style:none;
     display:flex;
-   
+
 }
 
 .menu ul li{
@@ -489,7 +526,7 @@ a{
     padding-top: 20px;
     padding-left: 25px;
     padding-right: 25px;
-  
+
 }
 
 .m-item{
@@ -511,8 +548,8 @@ a{
     text-align: left;
     align-self: stretch;
     justify-content: center;
-    flex-basis: 200px;   
-    flex-shrink: 0; 
+    flex-basis: 200px;
+    flex-shrink: 0;
     background-color: #1897ff;
 }
 
@@ -524,7 +561,7 @@ a{
     flex-wrap: wrap;
     background-color: #777;
     border-radius: 30px;
-    flex-direction: column; 
+    flex-direction: column;
 }
 .subscribe h2{
     text-align: center;
@@ -569,8 +606,8 @@ a{
         flex-direction: column;
         align-self: stretch;
         justify-content: center;
-        flex-basis: 300px;   
-        flex-shrink: 0; 
+        flex-basis: 300px;
+        flex-shrink: 0;
     }
     .menu ul{
         flex-direction: column;

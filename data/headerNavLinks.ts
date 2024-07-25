@@ -4,4 +4,4 @@ const headerNavLinks = [
   { href: "/contact", title: "Contact" },
 ];
 
-export default headerNavLinks
+export default headerNavLinks;

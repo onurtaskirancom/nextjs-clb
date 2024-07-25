@@ -6,7 +6,7 @@ import { CiLinkedin } from "react-icons/ci";
 import { FaInstagram } from "react-icons/fa";
 import { CiMail } from "react-icons/ci";
 import Link from "./link";
-import Tag from './side-tag'
+import Tag from "./side-tag";
 import Image from "next/image";
 
 const socialLinks = [
@@ -106,4 +106,3 @@ const sidebar = () => {
   );
 };
 export default sidebar;
-

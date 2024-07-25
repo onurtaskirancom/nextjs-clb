@@ -9,31 +9,33 @@ tags:
   - Web Programming
 ---
 
-
-<img className="w-full rounded-xl" src="https://res.cloudinary.com/djfqidbj1/image/upload/v1699966515/p32fzcdne2cydf2lunwu.jpg" alt="onurtaskiran" />
+<img
+  className="w-full rounded-xl"
+  src="https://res.cloudinary.com/djfqidbj1/image/upload/v1699966515/p32fzcdne2cydf2lunwu.jpg"
+  alt="onurtaskiran"
+/>
 
 React is fast by default. So the useTransition hook has specific use cases and is probably not something you will use in all your applications. useTransition hook is a hook available in React 18 and above and is used to manage asynchronous operations. This hook is designed to provide better performance and faster user experience, especially in large and complex applications. Thus, the user interface does not freeze and user interaction is not hindered.
 
-In the example below, when you click the button, 50 000 items are added to the "items" array and these items are displayed as "div" elements containing the "☠️" symbol. 
+In the example below, when you click the button, 50 000 items are added to the "items" array and these items are displayed as "div" elements containing the "☠️" symbol.
 
 ```javascript
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 function App() {
-  const [items, setItems] = useState([]); 
-const addItem = () => {
-      const newItems = Array.from({ length: 50000 }, (_, index) => {
-        return (
-          <div key={index}>
-            <p>☠️</p>
-          </div>
-        );
-      });
-      setItems(newItems);
-    };
+  const [items, setItems] = useState([]);
+  const addItem = () => {
+    const newItems = Array.from({ length: 50000 }, (_, index) => {
+      return (
+        <div key={index}>
+          <p>☠️</p>
+        </div>
+      );
+    });
+    setItems(newItems);
+  };
 
   return (
-
     <div>
       <button onClick={addItem}>Add Item</button>
       {items}
@@ -49,12 +51,12 @@ It will run very slowly. It will take a long time for them to appear on the scre
 Now let's do our example with the useTransition hook
 
 ```javascript
-import React, { useState, useTransition } from 'react';
+import React, { useState, useTransition } from "react";
 
 function App() {
   const [items, setItems] = useState([]);
   const [isAdding, startAdding] = useTransition();
-  
+
   const addItem = () => {
     startAdding(() => {
       const newItems = Array.from({ length: 50000 }, (_, index) => {
@@ -72,11 +74,7 @@ function App() {
   return (
     <div>
       <button onClick={addItem}>Add Item</button>
-      {isAdding ? (
-        <p>Adding items...</p>
-      ) : (
-        items
-      )}
+      {isAdding ? <p>Adding items...</p> : items}
     </div>
   );
 }

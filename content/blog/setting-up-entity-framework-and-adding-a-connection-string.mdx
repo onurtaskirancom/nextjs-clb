@@ -9,41 +9,73 @@ tags:
   - Web Programming
 ---
 
-<img className="w-full rounded-xl" src="https://res.cloudinary.com/djfqidbj1/image/upload/v1671157729/gw2wtfbdlzb0iloucnpf.jpg" alt="onurtaskiran" />
+<img
+  className="w-full rounded-xl"
+  src="https://res.cloudinary.com/djfqidbj1/image/upload/v1671157729/gw2wtfbdlzb0iloucnpf.jpg"
+  alt="onurtaskiran"
+/>
 
-Hello we created a web api project with asp.net core in the<a href="/blog/creating-web-api-project-with-aspnet-core"> previous post.</a>  Now We'll Install Entity Framework and Add a Connection String. I'll use SQLite  as the database. And what we want to do is install this version of Microsoft entity framework core. I'm creating a new class called store context and I have to derive it from dbcontext object. 
+Hello we created a web api project with asp.net core in the<a href="/blog/creating-web-api-project-with-aspnet-core"> previous post.</a> Now We'll Install Entity Framework and Add a Connection String. I'll use SQLite as the database. And what we want to do is install this version of Microsoft entity framework core. I'm creating a new class called store context and I have to derive it from dbcontext object.
 
 We create a Data folder inside the API folder and create our StoreContext class inside the data folder.
 
 It won't find dbcontext and we need to add entity framework as a package to our application. And to do this, we need to go to new get package manager.
 
-<img className="w-full " src="https://res.cloudinary.com/djfqidbj1/image/upload/v1704650321/dmd94dhl04jhqd1bkuxn.jpg" alt="onurtaskiran" />
+<img
+  className="w-full "
+  src="https://res.cloudinary.com/djfqidbj1/image/upload/v1704650321/dmd94dhl04jhqd1bkuxn.jpg"
+  alt="onurtaskiran"
+/>
 
 I open the terminal. and dotnet dash dash info. I'm typing the command.
 
-<img className="w-full " src="https://res.cloudinary.com/djfqidbj1/image/upload/v1704650320/rdobjplp6lpbqnnfrwnx.jpg" alt="onurtaskiran" />
+<img
+  className="w-full "
+  src="https://res.cloudinary.com/djfqidbj1/image/upload/v1704650320/rdobjplp6lpbqnnfrwnx.jpg"
+  alt="onurtaskiran"
+/>
 
 In the package manager we search for microsoft.entityframeworkcore.
 
-<img className="w-full " src="https://res.cloudinary.com/djfqidbj1/image/upload/v1704650322/kghyljca2th8bm6kuwmw.jpg" alt="onurtaskiran" />
+<img
+  className="w-full "
+  src="https://res.cloudinary.com/djfqidbj1/image/upload/v1704650322/kghyljca2th8bm6kuwmw.jpg"
+  alt="onurtaskiran"
+/>
 
 Now I'm using the five point zero point four version and it is a good idea to match it with the entity framework version you are using. You don't have to be on the same version of me.
 
 Make sure you choose the one that is closest or as close as possible to the version you are using.
 
-<img className="w-full " src="https://res.cloudinary.com/djfqidbj1/image/upload/v1704650320/ya0wgxeb0g5iqhzruwce.jpg" alt="onurtaskiran" />
+<img
+  className="w-full "
+  src="https://res.cloudinary.com/djfqidbj1/image/upload/v1704650320/ya0wgxeb0g5iqhzruwce.jpg"
+  alt="onurtaskiran"
+/>
 
 We run the dotnet restore command.
 
-<img className="w-full " src="https://res.cloudinary.com/djfqidbj1/image/upload/v1704650321/nq5fba8hv8n9c2xnbukb.jpg" alt="onurtaskiran" />
+<img
+  className="w-full "
+  src="https://res.cloudinary.com/djfqidbj1/image/upload/v1704650321/nq5fba8hv8n9c2xnbukb.jpg"
+  alt="onurtaskiran"
+/>
 
 Press ctrl and point and choose to using Microsoft.EntityFrameworkcore.
 
-<img className="w-full " src="https://res.cloudinary.com/djfqidbj1/image/upload/v1704650321/nzgv2kszdmf3xtwxepsc.jpg" alt="onurtaskiran" />
+<img
+  className="w-full "
+  src="https://res.cloudinary.com/djfqidbj1/image/upload/v1704650321/nzgv2kszdmf3xtwxepsc.jpg"
+  alt="onurtaskiran"
+/>
 
 then I hover over StoreContext and select Generate constructor 'StoreContext(options)'.
 
-<img className="w-full " src="https://res.cloudinary.com/djfqidbj1/image/upload/v1704650321/vi5xriuojttv7hsrjndh.jpg" alt="onurtaskiran" />
+<img
+  className="w-full "
+  src="https://res.cloudinary.com/djfqidbj1/image/upload/v1704650321/vi5xriuojttv7hsrjndh.jpg"
+  alt="onurtaskiran"
+/>
 
 We hover over Product and select using API.Entities;
 
@@ -53,11 +85,10 @@ We specify our database in appsettings.Development.json.
   "ConnectionStrings": {
     "DefaultConnection": "Data source=onurnet.db"
   }
-  
+
 ```
 
 This needs to be spelled exactly as it is here.
-
 
 ```javascript
 {
@@ -74,19 +105,29 @@ This needs to be spelled exactly as it is here.
 }
 
 ```
+
 And then what we need to do is we need to go to our start of class and we need to add our data context or our store context.
 
-<img className="w-full " src="https://res.cloudinary.com/djfqidbj1/image/upload/v1704650321/y3bg28d6hmyhe4vd3phh.jpg" alt="onurtaskiran" />
+<img
+  className="w-full "
+  src="https://res.cloudinary.com/djfqidbj1/image/upload/v1704650321/y3bg28d6hmyhe4vd3phh.jpg"
+  alt="onurtaskiran"
+/>
 
 We select API.Data
 
-<img className="w-full " src="https://res.cloudinary.com/djfqidbj1/image/upload/v1704650322/lmzav6qlnjlnhq9woaks.jpg" alt="onurtaskiran" />
+<img
+  className="w-full "
+  src="https://res.cloudinary.com/djfqidbj1/image/upload/v1704650322/lmzav6qlnjlnhq9woaks.jpg"
+  alt="onurtaskiran"
+/>
 
 we add our code.
 
 ```javascript
-services.AddDbContext<StoreContext>(x => 
-                x.UseSqlite(_config.GetConnectionString("DefaultConnection")));
+services.AddDbContext <
+  StoreContext >
+  ((x) => x.UseSqlite(_config.GetConnectionString("DefaultConnection")));
 ```
 
 Result:
@@ -96,9 +137,9 @@ public void ConfigureServices(IServiceCollection services)
         {
 
             services.AddControllers();
-            services.AddDbContext<StoreContext>(x => 
+            services.AddDbContext<StoreContext>(x =>
                 x.UseSqlite(_config.GetConnectionString("DefaultConnection")));
-                
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "API", Version = "v1" });
@@ -140,9 +181,9 @@ namespace API
         {
 
             services.AddControllers();
-            services.AddDbContext<StoreContext>(x => 
+            services.AddDbContext<StoreContext>(x =>
                 x.UseSqlite(_config.GetConnectionString("DefaultConnection")));
-                
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "API", Version = "v1" });
@@ -173,4 +214,3 @@ namespace API
     }
 }
 ```
-

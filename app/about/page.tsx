@@ -79,71 +79,101 @@ const page = () => {
         <br />
         <h6 className="dark:text-tahiti-title">SOFTWARE SKILLS</h6>
         <p>
-          <img
+          <Image
             className="float-left"
-            src="images/react.png"
+            src="/images/react.png"
             alt="onurtaskiran"
+            width={32}
+            height={32}
           />
-          <img
+          <Image
             className="float-left"
-            src="images/nodejs.png"
+            src="/images/nodejs.png"
             alt="onurtaskiran"
+            width={32}
+            height={32}
           />
-          <img
+          <Image
             className="float-left"
-            src="images/javascript.png"
+            src="/images/javascript.png"
             alt="onurtaskiran"
+            width={32}
+            height={32}
           />
-          <img
+          <Image
             className="float-left"
-            src="images/angular.png"
+            src="/images/angular.png"
             alt="onurtaskiran"
+            width={32}
+            height={32}
           />
-          <img
+          <Image
             className="float-left"
-            src="images/aspnet.png"
+            src="/images/aspnet.png"
             alt="onurtaskiran"
+            width={32}
+            height={32}
           />
-          <img
+          <Image
             className="float-left"
-            src="images/mongodb.png"
+            src="/images/mongodb.png"
             alt="onurtaskiran"
+            width={32}
+            height={32}
           />
-          <img
+          <Image
             className="float-left"
-            src="images/msserver.png"
+            src="/images/msserver.png"
             alt="onurtaskiran"
+            width={32}
+            height={32}
           />
-          <img
+          <Image
             className="float-left"
-            src="images/html5.png"
+            src="/images/html5.png"
             alt="onurtaskiran"
+            width={32}
+            height={32}
           />
-          <img className="float-left" src="images/css.png" alt="onurtaskiran" />
+          <Image
+            className="float-left"
+            src="/images/css.png"
+            alt="onurtaskiran"
+            width={32}
+            height={32}
+          />
         </p>
         <br /> <br />
         <h6 className="float-left dark:text-tahiti-title">GRAPHIC SKILLS </h6>
         <br />
         <p>
-          <img
+          <Image
             className="float-left"
-            src="images/photoshop.png"
+            src="/images/photoshop.png"
             alt="onurtaskiran"
+            width={32}
+            height={32}
           />
-          <img
+          <Image
             className="float-left"
-            src="images/illustrator.png"
+            src="/images/illustrator.png"
             alt="onurtaskiran"
+            width={32}
+            height={32}
           />
-          <img
+          <Image
             className="float-left"
-            src="images/indesign.png"
+            src="/images/indesign.png"
             alt="onurtaskiran"
+            width={32}
+            height={32}
           />
-          <img
+          <Image
             className="float-left"
-            src="images/premiere.png"
+            src="/images/premiere.png"
             alt="onurtaskiran"
+            width={32}
+            height={32}
           />
         </p>
       </div>

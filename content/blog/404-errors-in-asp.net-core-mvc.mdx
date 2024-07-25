@@ -9,7 +9,11 @@ tags:
   - Software
 ---
 
-<img className="w-full rounded-xl" src="https://res.cloudinary.com/djfqidbj1/image/upload/v1671069309/uk435ku3c9dzqrdok9o5.jpg" alt="onurtaskiran" />
+<img
+  className="w-full rounded-xl"
+  src="https://res.cloudinary.com/djfqidbj1/image/upload/v1671069309/uk435ku3c9dzqrdok9o5.jpg"
+  alt="onurtaskiran"
+/>
 
 When a web page is not found, a 404 error is returned by the application and ASP.NET Core MVC provides a generic error page 404 errors normally look bad. We can redirect the error to the 404 page we created. Let's go to the startup.cs page of our project. Remove the code below
 
@@ -21,7 +25,7 @@ app.UseExceptionHandler("/Home/Error");
 app.UseStatusCodePagesWithReExecute("/Error/{0}");
 ```
 
-Go to launchSettingJson 
+Go to launchSettingJson
 
 LaunchSettings Json should look like this.
 
@@ -35,7 +39,7 @@ LaunchSettings Json should look like this.
       }
 ```
 
-Add ErrorController.cs to our Controllers file   
+Add ErrorController.cs to our Controllers file
 
 ```javascript
 using Microsoft.AspNetCore.Mvc;

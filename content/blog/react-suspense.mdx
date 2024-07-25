@@ -1,6 +1,6 @@
 ---
 title: React Suspense
-description: React Suspense is a powerful tool that can be used to enhance React applications for better performance and better user experience. 
+description: React Suspense is a powerful tool that can be used to enhance React applications for better performance and better user experience.
 date: "2023-11-15T03:25:00"
 image: "https://res.cloudinary.com/djfqidbj1/image/upload/v1700088627/lhsowghpnrtlddhsex4k.jpg"
 tags:
@@ -9,7 +9,11 @@ tags:
   - React
 ---
 
-<img className="w-full rounded-xl" src="https://res.cloudinary.com/djfqidbj1/image/upload/v1700088627/lhsowghpnrtlddhsex4k.jpg" alt="onurtaskiran" />
+<img
+  className="w-full rounded-xl"
+  src="https://res.cloudinary.com/djfqidbj1/image/upload/v1700088627/lhsowghpnrtlddhsex4k.jpg"
+  alt="onurtaskiran"
+/>
 
 React Suspense is a powerful tool that can be used to enhance React applications for better performance and better user experience. To lazily load our components or incrementally load our application, we use a tool called suspense. React Suspense is a feature that allows React applications to better handle asynchronous operations. It is often used for data loading, code loading and other asynchronous operations. React Suspense is ideal for improving user experience and improving application performance.
 
@@ -18,9 +22,9 @@ React.lazy() is a function used to manage dynamically loaded components. This fe
 A simple example:
 
 ```javascript
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, lazy } from "react";
 
-const SlowComponent = lazy(() => import('./SlowComponent'));
+const SlowComponent = lazy(() => import("./SlowComponent"));
 
 function App() {
   return (
@@ -41,7 +45,6 @@ In the example above, the Suspense component shows "Loading..." while waiting fo
 Let's look at another example.
 
 Let's consider a social media application where we will use React Suspense to asynchronously load a user's profile and posts.
-
 
 ```javascript
 import React, { Suspense } from "react";

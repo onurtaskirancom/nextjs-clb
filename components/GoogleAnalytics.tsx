@@ -5,16 +5,20 @@ import { usePathname, useSearchParams } from "next/navigation";
 import { useEffect } from "react";
 import { pageview } from "@/lib/gtagHelper";
 
-export default function GoogleAnalytics({GA_MEASUREMENT_ID}: {GA_MEASUREMENT_ID: string;}) {
-    const pathname = usePathname();
-    const searchParams = useSearchParams();
+export default function GoogleAnalytics({
+  GA_MEASUREMENT_ID,
+}: {
+  GA_MEASUREMENT_ID: string;
+}) {
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
 
-    useEffect(() => {
-      const url = pathname + searchParams.toString();
+  useEffect(() => {
+    const url = pathname + searchParams.toString();
 
-      pageview(GA_MEASUREMENT_ID, url);
-    }, [pathname, searchParams, GA_MEASUREMENT_ID]);
-    
+    pageview(GA_MEASUREMENT_ID, url);
+  }, [pathname, searchParams, GA_MEASUREMENT_ID]);
+
   return (
     <>
       <Script
@@ -36,7 +40,7 @@ export default function GoogleAnalytics({GA_MEASUREMENT_ID}: {GA_MEASUREMENT_ID:
                 `,
         }}
       />
-  
+
       {/* <Script
         strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}

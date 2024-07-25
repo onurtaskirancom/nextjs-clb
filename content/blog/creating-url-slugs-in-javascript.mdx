@@ -1,6 +1,6 @@
 ---
 title: Creating URL slugs in Javascript
-description: You can prepare your url for SEO by using javascript in making slug url. I am saving the url I created to my database with 
+description: You can prepare your url for SEO by using javascript in making slug url. I am saving the url I created to my database with
 date: "2022-09-25T21:10:20"
 image: "https://res.cloudinary.com/djfqidbj1/image/upload/v1671154826/zvcqj7u8d5x9mndghs94.jpg"
 tags:
@@ -9,14 +9,18 @@ tags:
   - Software
 ---
 
-<img className="w-full rounded-xl" src="https://res.cloudinary.com/djfqidbj1/image/upload/v1671154826/zvcqj7u8d5x9mndghs94.jpg" alt="onurtaskiran" />
+<img
+  className="w-full rounded-xl"
+  src="https://res.cloudinary.com/djfqidbj1/image/upload/v1671154826/zvcqj7u8d5x9mndghs94.jpg"
+  alt="onurtaskiran"
+/>
 
-You can prepare your url for SEO by using javascript in making slug url. I am saving the url I created to my database with ```<input type = "text">``` Add two inputs. set the id value to 'one' and 'two' ... Don't forget to add jquery.min.js library
+You can prepare your url for SEO by using javascript in making slug url. I am saving the url I created to my database with `<input type = "text">` Add two inputs. set the id value to 'one' and 'two' ... Don't forget to add jquery.min.js library
 
 ```javascript
 <input type="text" id="one" />
 <br />
-     
+
 <input type="text" id="two" />
 <script src="jquery.min.js"></script>
 
@@ -24,7 +28,7 @@ You can prepare your url for SEO by using javascript in making slug url. I am sa
  $(document).ready(function () {
    $("#one").live("keyup", function () {
 
-     str = $(this).val(); 
+     str = $(this).val();
      str = str.toLowerCase();
      str = str.replace(/\s\s+/g, ' ').replace(/[^a-z0-9\s]/gi, '').replace(/[^\w]/ig, "-");
 
@@ -37,7 +41,7 @@ You can prepare your url for SEO by using javascript in making slug url. I am sa
 
 That is all..
 
-Latin, Greek, Turkish, Polish etc. you can apply the characters as follows. Feel free to remove of the  object those characters that probably in your country no one will use and make the code shorter.
+Latin, Greek, Turkish, Polish etc. you can apply the characters as follows. Feel free to remove of the object those characters that probably in your country no one will use and make the code shorter.
 
 ```javascript
 <script src="jquery.min.js"></script>
@@ -54,21 +58,21 @@ Latin, Greek, Turkish, Polish etc. you can apply the characters as follows. Feel
 
                         function replaceSpecialChars(str) {
                             var specialChars = [
-							
-							["À", "A"], ["Á", "A"], ["Â", "A"], ["Ã", "A"], ["Ä", "A"], ["Å", "A"], ["Æ", "AE"], ["Ç", "C"], 
-		["È", "E"], ["É", "E"], ["Ê", "E"], ["Ë", "E"], ["Ì", "I"], ["Í", "I"], ["Î", "I"], ["Ï", "I"], 
-		["Ð", "D"], ["Ñ", "N"], ["Ò", "O"], ["Ó", "O"], ["Ô", "O"], ["Õ", "O"], ["Ö", "O"], ["Ő", "O"], 
-		["Ø", "O"], ["Ù", "U"], ["Ú", "U"], ["Û", "U"], ["Ü", "U"], ["Ű", "U"], ["Ý", "Y"], ["Þ", "TH"], 
-		["ß", "ss"], 
-		["à", "a"], ["á", "a"], ["â", "a"], ["ã", "a"], ["ä", "a"], ["å", "a"], ["æ", "ae"], ["ç", "c"], 
-		["è", "e"], ["é", "e"], ["ê", "e"], ["ë", "e"], ["ì", "i"], ["í", "i"], ["î", "i"], ["ï", "i"], 
-		["ð", "d"], ["ñ", "n"], ["ò", "o"], ["ó", "o"], ["ô", "o"], ["õ", "o"], ["ö", "o"], ["ő", "o"], 
-		["ø", "o"], ["ù", "u"], ["ú", "u"], ["û", "u"], ["ü", "u"], ["ű", "u"], ["ý", "y"], ["þ", "th"], 
+
+							["À", "A"], ["Á", "A"], ["Â", "A"], ["Ã", "A"], ["Ä", "A"], ["Å", "A"], ["Æ", "AE"], ["Ç", "C"],
+		["È", "E"], ["É", "E"], ["Ê", "E"], ["Ë", "E"], ["Ì", "I"], ["Í", "I"], ["Î", "I"], ["Ï", "I"],
+		["Ð", "D"], ["Ñ", "N"], ["Ò", "O"], ["Ó", "O"], ["Ô", "O"], ["Õ", "O"], ["Ö", "O"], ["Ő", "O"],
+		["Ø", "O"], ["Ù", "U"], ["Ú", "U"], ["Û", "U"], ["Ü", "U"], ["Ű", "U"], ["Ý", "Y"], ["Þ", "TH"],
+		["ß", "ss"],
+		["à", "a"], ["á", "a"], ["â", "a"], ["ã", "a"], ["ä", "a"], ["å", "a"], ["æ", "ae"], ["ç", "c"],
+		["è", "e"], ["é", "e"], ["ê", "e"], ["ë", "e"], ["ì", "i"], ["í", "i"], ["î", "i"], ["ï", "i"],
+		["ð", "d"], ["ñ", "n"], ["ò", "o"], ["ó", "o"], ["ô", "o"], ["õ", "o"], ["ö", "o"], ["ő", "o"],
+		["ø", "o"], ["ù", "u"], ["ú", "u"], ["û", "u"], ["ü", "u"], ["ű", "u"], ["ý", "y"], ["þ", "th"],
 		["ÿ", "y"],
-		
+
 		// Turkish
 		["Ş", "S"], ["İ", "I"], ["Ç", "C"], ["Ü", "U"], ["Ö", "O"], ["Ğ", "G"],
-		["ş", "s"], ["ı", "i"], ["ç", "c"], ["ü", "u"], ["ö", "o"], ["ğ", "g"], 
+		["ş", "s"], ["ı", "i"], ["ç", "c"], ["ü", "u"], ["ö", "o"], ["ğ", "g"],
 
 		// Greek
 		["Α", "A"], ["Β", "B"], ["Γ", "G"], ["Δ", "D"], ["Ε", "E"], ["Ζ", "Z"], ["Η", "H"], ["Θ", "8"],
@@ -101,20 +105,20 @@ Latin, Greek, Turkish, Polish etc. you can apply the characters as follows. Feel
 		["є", "ye"], ["і", "i"], ["ї", "yi"], ["ґ", "g"],
 
 		// Czech
-		["Č", "C"], ["Ď", "D"], ["Ě", "E"], ["Ň", "N"], ["Ř", "R"], ["Š", "S"], ["Ť", "T"], ["Ů", "U"], 
-		["Ž", "Z"], 
+		["Č", "C"], ["Ď", "D"], ["Ě", "E"], ["Ň", "N"], ["Ř", "R"], ["Š", "S"], ["Ť", "T"], ["Ů", "U"],
+		["Ž", "Z"],
 		["č", "c"], ["ď", "d"], ["ě", "e"], ["ň", "n"], ["ř", "r"], ["š", "s"], ["ť", "t"], ["ů", "u"],
-		["ž", "z"], 
+		["ž", "z"],
 
 		// Polish
-		["Ą", "A"], ["Ć", "C"], ["Ę", "e"], ["Ł", "L"], ["Ń", "N"], ["Ó", "o"], ["Ś", "S"], ["Ź", "Z"], 
-		["Ż", "Z"], 
+		["Ą", "A"], ["Ć", "C"], ["Ę", "e"], ["Ł", "L"], ["Ń", "N"], ["Ó", "o"], ["Ś", "S"], ["Ź", "Z"],
+		["Ż", "Z"],
 		["ą", "a"], ["ć", "c"], ["ę", "e"], ["ł", "l"], ["ń", "n"], ["ó", "o"], ["ś", "s"], ["ź", "z"],
 		["ż", "z"],
 
 		// Latvian
-		["Ā", "A"], ["Č", "C"], ["Ē", "E"], ["Ģ", "G"], ["Ī", "i"], ["Ķ", "k"], ["Ļ", "L"], ["Ņ", "N"], 
-		["Š", "S"], ["Ū", "u"], ["Ž", "Z"], 
+		["Ā", "A"], ["Č", "C"], ["Ē", "E"], ["Ģ", "G"], ["Ī", "i"], ["Ķ", "k"], ["Ļ", "L"], ["Ņ", "N"],
+		["Š", "S"], ["Ū", "u"], ["Ž", "Z"],
 		["ā", "a"], ["č", "c"], ["ē", "e"], ["ģ", "g"], ["ī", "i"], ["ķ", "k"], ["ļ", "l"], ["ņ", "n"],
 		["š", "s"], ["ū", "u"], ["ž", "z"]];
 

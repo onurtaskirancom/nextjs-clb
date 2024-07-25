@@ -49,7 +49,7 @@
 
 :root[data-theme="dark"] {
   /* dark mode colors */
-  --color-accent: 950 100% 80%;/* hsl */
+  --color-accent: 950 100% 80%; /* hsl */
   --color-background-primary: 20 14% 4%;
   --color-background-secondary: 24 10% 10%;
   --color-background-tertiary: 12 6% 15%;
@@ -69,7 +69,7 @@
   --color-bullets: theme(colors.stone.600);
   --color-hr: theme(colors.stone.700);
   --color-quotes: var(--color-text-secondary);
-  --color-quote-borders:  rgb(130, 170, 255);
+  --color-quote-borders: rgb(130, 170, 255);
   --color-captions: var(--color-quotes);
   --color-th-bg: theme(colors.stone.900);
   --color-th-borders: var(--color-borders);

@@ -1,1 +1,1 @@
-NextJS Clb 
+NextJS Clb

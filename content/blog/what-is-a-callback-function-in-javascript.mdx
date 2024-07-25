@@ -9,7 +9,11 @@ tags:
   - Web Programming
 ---
 
-<img className="w-full rounded-xl" src="https://res.cloudinary.com/djfqidbj1/image/upload/v1680273257/pnhfznhpjz14octyim9g.jpg" alt="onurtaskiran" />
+<img
+  className="w-full rounded-xl"
+  src="https://res.cloudinary.com/djfqidbj1/image/upload/v1680273257/pnhfznhpjz14octyim9g.jpg"
+  alt="onurtaskiran"
+/>
 
 Callbacks are functions passed to other functions to be called inside the outer function. it is any function called by another function using a parameter. when we pass a function to another function and it is executed in that function, we can call it a callback. Callbacks are used a lot in coding. callback is very useful for asynchronous behavior where we want an event to occur when an event is completed.
 
@@ -23,12 +27,13 @@ function testHi(test) {
 }
 
 function message() {
-  console.log('hello world!');
+  console.log("hello world!");
 }
 testHi(message);
 ```
 
 output:
+
 ```javascript
 hello world!
 
@@ -43,11 +48,11 @@ Let's examine our example that prints the entered color on the console screen.
 
 ```javascript
 function writeColor(color) {
-  console.log('Color: ' + color);
+  console.log("Color: " + color);
 }
 
 function color(callback) {
-  let color = prompt('enter a color.');
+  let color = prompt("enter a color.");
   callback(color);
 }
 
@@ -58,26 +63,27 @@ Let's do another example. We take two values ​​and print them to the screen 
 
 ```javascript
 function user(username, email) {
-  console.log('username: ' + username + ' ' + 'email: ' + email);
+  console.log("username: " + username + " " + "email: " + email);
 }
-user('onur', 'onur@onurtaskiran.com');
+user("onur", "onur@onurtaskiran.com");
 
 function User2(username, email, callback) {
   const user =
-    'username: ' +
+    "username: " +
     username.toUpperCase() +
-    ' ' +
-    'email: ' +
+    " " +
+    "email: " +
     email.toUpperCase();
   callback(user);
 }
 
-User2('onur', 'onur@onurtaskiran.com', function (mail) {
+User2("onur", "onur@onurtaskiran.com", function (mail) {
   console.log(mail);
 });
 ```
 
 output:
+
 ```javascript
 username: onur email: onur@onurtaskiran.com
 username: ONUR email: ONUR@ONURTASKIRAN.COM

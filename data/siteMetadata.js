@@ -91,4 +91,4 @@ const siteMetadata = {
   },
 };
 
-module.exports = siteMetadata
+module.exports = siteMetadata;

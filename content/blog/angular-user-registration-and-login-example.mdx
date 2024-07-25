@@ -9,18 +9,29 @@ tags:
   - Software
 ---
 
-
-<img className="w-full rounded-xl" src="https://res.cloudinary.com/djfqidbj1/image/upload/v1671156780/vtpkaawl04g9srhl3zqf.jpg" alt="onurtaskiran" />
+<img
+  className="w-full rounded-xl"
+  src="https://res.cloudinary.com/djfqidbj1/image/upload/v1671156780/vtpkaawl04g9srhl3zqf.jpg"
+  alt="onurtaskiran"
+/>
 
 What are we gonna do, first of all, a home page will greet us with a welcome. We will have two buttons named register and login. When you click Register, our registration page will come up asynchronously. At the same time, when you click login, our login page will open in the same way. When logged in, the navbar will write a welcome user and there will be a logout button. Let 's do it
 
-<img className="w-6/12" src="https://res.cloudinary.com/djfqidbj1/image/upload/v1704634890/whzfu2dkl7z3ztsjybry.jpg" alt="onurtaskiran" />
-<img className="w-6/12" src="https://res.cloudinary.com/djfqidbj1/image/upload/v1704634890/qavwkp0rcl22xlv5nukw.jpg" alt="onurtaskiran" />
+<img
+  className="w-6/12"
+  src="https://res.cloudinary.com/djfqidbj1/image/upload/v1704634890/whzfu2dkl7z3ztsjybry.jpg"
+  alt="onurtaskiran"
+/>
+<img
+  className="w-6/12"
+  src="https://res.cloudinary.com/djfqidbj1/image/upload/v1704634890/qavwkp0rcl22xlv5nukw.jpg"
+  alt="onurtaskiran"
+/>
 
 Angular versions: Angular 11, 10, 9, 8, 7, 6, 2/5
 
 User Model
-Path: /src/app/_models/user.ts
+Path: /src/app/\_models/user.ts
 
 We define a small class that defines the properties of a user.
 
@@ -30,9 +41,10 @@ export interface User {
   token: string;
 }
 ```
+
 Account Service
 
-Path: /src/app/_services/account.service.ts
+Path: /src/app/\_services/account.service.ts
 
 Here we perform the methods for login, logout, and registration, and the standard methods for retrieving and modifying user data.
 
@@ -93,7 +105,7 @@ Path: /src/app/home/home.component.html
 
 what will we do here, first of all We welcome the client with a welcome message and send them to the login or registration form.
 
-We transfer this process to the registration form with the *ngIf="registerMode" code or send it to the login form with the *ngIf="loginMode"  code.
+We transfer this process to the registration form with the *ngIf="registerMode" code or send it to the login form with the *ngIf="loginMode" code.
 
 ```javascript
 <div class="container mt-5">
@@ -271,7 +283,7 @@ We make a design that can log out with the navbar after the user logs in.
           <a class="nav-link" href="#">Messages</a>
         </li>
       </ul>
-	  
+
       <div class="dropdown" *ngIf="accountService.currentUser$ | async" dropdown>
         <a class="dropdown-toggle text-light" dropdownToggle>welcome user</a>
         <div class="dropdown-menu mt-3" *dropdownMenu>
@@ -308,7 +320,7 @@ export class NavComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  
+
     logout() {
     this.accountService.logout();
   }
@@ -316,12 +328,11 @@ export class NavComponent implements OnInit {
 }
 ```
 
-
 Register Component Template
 
 Path: /src/app/register/register.component.html
 
-The registration component template includes a simple registration form with username and password fields. We send username with [(ngModel)]="model.username"  code and [(ngModel)]="model.password" code and user password to the registration form.
+The registration component template includes a simple registration form with username and password fields. We send username with [(ngModel)]="model.username" code and [(ngModel)]="model.password" code and user password to the registration form.
 
 ```javascript
 <form #registerForm="ngForm" (ngSubmit)="register()" autocomplete="off">
@@ -460,19 +471,19 @@ Path: /src/app/app.module.ts
 This is the root module of our application.
 
 ```javascript
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import {HttpClientModule} from  '@angular/common/http';
+import { NgModule } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
+import { HttpClientModule } from "@angular/common/http";
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { NavComponent } from './nav/nav.component';
-import { FormsModule } from '@angular/forms';
-import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HomeComponent } from './home/home.component';
-import { RegisterComponent } from './register/register.component';
-import { LoginComponent } from './login/login.component';
+import { AppRoutingModule } from "./app-routing.module";
+import { AppComponent } from "./app.component";
+import { NavComponent } from "./nav/nav.component";
+import { FormsModule } from "@angular/forms";
+import { BsDropdownModule } from "ngx-bootstrap/dropdown";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { HomeComponent } from "./home/home.component";
+import { RegisterComponent } from "./register/register.component";
+import { LoginComponent } from "./login/login.component";
 
 @NgModule({
   declarations: [
@@ -480,7 +491,7 @@ import { LoginComponent } from './login/login.component';
     NavComponent,
     HomeComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -488,12 +499,12 @@ import { LoginComponent } from './login/login.component';
     HttpClientModule,
     BrowserAnimationsModule,
     FormsModule,
-    BsDropdownModule.forRoot()
+    BsDropdownModule.forRoot(),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
 ```
 
 Production Environment Config
@@ -502,7 +513,7 @@ Path: /src/environments/environment.prod.ts
 
 ```javascript
 export const environment = {
-  production: true
+  production: true,
 };
 ```
 
@@ -512,11 +523,11 @@ Path: /src/environments/environment.ts
 
 ```javascript
 export const environment = {
-  production: false
+  production: false,
 };
 ```
 
-Main Index Html 
+Main Index Html
 
 Path: /src/index.html
 
@@ -545,18 +556,19 @@ Path: /src/main.ts
 It is the entry point where the application is launched and preloaded by angular.
 
 ```javascript
-import { enableProdMode } from '@angular/core';
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { enableProdMode } from "@angular/core";
+import { platformBrowserDynamic } from "@angular/platform-browser-dynamic";
 
-import { AppModule } from './app/app.module';
-import { environment } from './environments/environment';
+import { AppModule } from "./app/app.module";
+import { environment } from "./environments/environment";
 
 if (environment.production) {
   enableProdMode();
 }
 
-platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.error(err));
+platformBrowserDynamic()
+  .bootstrapModule(AppModule)
+  .catch((err) => console.error(err));
 ```
 
 Polyfills
@@ -566,7 +578,7 @@ Path: /src/polyfills.ts
 This file is created automatically by the Angular CLI when creating a new project with the ng new command, and also allows the App to run on all major browsers.
 
 ```javascript
-import 'zone.js/dist/zone';
+import "zone.js/dist/zone";
 ```
 
 Npm package.json

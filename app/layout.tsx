@@ -8,7 +8,6 @@ import { Metadata } from "next";
 import Sidebar from "@/components/sidebar";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 
-
 export const metadata: Metadata = {
   title: {
     default: config.title,

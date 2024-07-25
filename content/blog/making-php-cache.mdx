@@ -9,7 +9,11 @@ tags:
   - Php
 ---
 
-<img className="w-full rounded-xl" src="https://res.cloudinary.com/djfqidbj1/image/upload/v1671153853/t1d2eivhpnlup7ainjz9.png" alt="onurtaskiran" />
+<img
+  className="w-full rounded-xl"
+  src="https://res.cloudinary.com/djfqidbj1/image/upload/v1671153853/t1d2eivhpnlup7ainjz9.png"
+  alt="onurtaskiran"
+/>
 
 Websites made without cache can cause speed problems. An event called cache is the caching process. This is very suitable for speeding up your php pages. We can make our php pages that need to be faster with easy and efficient codes
 
@@ -41,7 +45,7 @@ Let's add the codes to our b-cache.php page.
 
 ```javascript
 // import content to a file
-$cached = fopen($cachefile, 'w');
+$cached = fopen($cachefile, "w");
 fwrite($cached, ob_get_contents());
 fclose($cached);
 ob_end_flush(); //send to browser
@@ -52,11 +56,11 @@ If our file is not found here, this code is executed. All of the php page is sen
 Yes now we are calling to our main php file with include as below.
 
 ```javascript
-include('top-cache.php'); 
+include("top-cache.php");
 
 // Your website codes
 
-include('bottom-cache.php');
+include("bottom-cache.php");
 ```
 
 Your site is now faster.
